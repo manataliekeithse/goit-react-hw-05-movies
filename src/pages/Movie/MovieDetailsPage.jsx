@@ -10,7 +10,6 @@ const MovieDetailsPage = () => {
   const [movieDetails, setMovieDetails] = useState(null);
   const location = useLocation();
 
-  // Add console logs for the location object
   useEffect(() => {
     console.log('Location object:', location);
   }, [location]);

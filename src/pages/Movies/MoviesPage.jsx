@@ -12,7 +12,7 @@ import css from './MoviesPage.module.css';
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
-  const movieName = searchParams.get('query') ?? 'Friends'; // Default search query is 'Friends'
+  const movieName = searchParams.get('query') ?? 'Friends';
 
   const { movieId } = useParams();
   console.log('movieId', movieId);
@@ -60,7 +60,6 @@ const MoviesPage = () => {
           onChange={e => updateQueryString(e.target.value)}
           placeholder="Search movies..."
         />
-        {/* Removed the button since the search updates automatically with the input */}
       </div>
       <div className={css.buttonWrapper}>
         <button onClick={() => handleNavigate(false)}>
